@@ -1,0 +1,32 @@
+#include <vector>//Essentially an array class which changes size automatically
+
+class list{
+    private: // Cannot be accessed by user, object will contain these things
+        int* arr;
+        int length;
+        int capacity;
+    
+    public:
+    list(int size) : arr(new int[size]), length(size), capacity(size) // Way to initialize variables without using brackets
+    {}
+    //Destructor--called when a list varaible goes out of scope, or when delete is called on a list created by new
+    ~list(){
+        delete[] arr; //Deletes array before the local variables is freed
+    }
+
+    int& at(int ind){//Returns an int refrence: allows for modification of the variable at the list array
+
+    }
+}
+int main(){
+    //Each vector object maintains an array, is allocated on the heap by class constructor each time vector is declared
+    //Dont have to delete vector even though it is made on the heap
+
+    // size, push_back, pop_back returns number of elements, adds value to end of x, and removes last value of x respectively
+    // Inserting at an arbitrary location is faster at end, slower at beginning
+    // insert(x.begin()+i, n) or insert(x.end()-i, n) are valid calls, beginning and end return pointers
+    // Vectors pass by value
+    // New can only allocate 1D arrays on the heap: two ways to get around:
+        // Allocate 1D array of size width*height and manually calculate indices of elements you want to access (faster since one after another)
+        // Use 1D array of pointers, where each pointer is another 1D array (need to make a call to delete every pointer)
+}

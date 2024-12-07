@@ -1,0 +1,15 @@
+User ajitjain
+User michaelm
+Post 42412212 ajitjain 
+Post 58687888 michaelm When an #array is passed to a #function, it decays to a pointer.
+Post 42343253 michaelm You can use pass-by-refrence, if you need multiple updated values in calling #function. It also helps save memory and CPU cycles.
+User otoast
+Post 39448274 otoast I'm so #HAPPY! I just figured out how to use #2DArrays to create a ticket holder function #soGreatful!?!
+Post 34958372 otoast #array A should always be great to use. Don't forget your meds, grandpa
+User bighunter
+Post 99234722 bighunter #array is my favourite thing in the world. I don't know what other info to write except for this.
+Post 37537242 bighunter #dynamic love is my HUMANENINOY HUMAN FUH G3OA3TGNGM FUK
+Post 24873213 bighunter #you #will #never #stop #me #from #posting #on #CPPeers!! #We!e #love it #heremf #idkwhatimdoing these days.
+Post 13457321 ajitjain I got no more will to live. Please Donald Trump take me! @ all my haters i love #Cplusplus
+Post 29348323 ajitjain when you messing with a real one, only #dynamic arrays and #function! idk what im deallocating #dynamic
+Post 34456634 otoast #dynamic A should always be great to use. 

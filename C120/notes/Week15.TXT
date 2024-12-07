@@ -1,0 +1,47 @@
+// Doubly-linked list
+    // Node has two pointers instead:
+        // One to previous node
+        // One to next node
+    // Pros:
+        // Traverse list in both directions
+        // Node having a pointer to previous one makes removing simpler
+
+    // Cons:
+        // Memory usage (requires twice as much space to store pointers)
+
+// Circular Linked List
+    // Final node posts back to first node instead of null
+    // Can be single/doubly-linked
+    // Useful for representing inherently cyclic data
+
+// Let only the functions/classes that call for resources to handle the resource also.
+    // EX: If a Linked list creates the nodes, let it handle the destruction of the nodes: not the node class itself
+
+// Inheritance -- A way of allowing calsses to share member attributes/methods
+    // Represents "is a type of" relationship
+
+// Main class is base class, subclass is the derrived class
+// Need to call a function in base class as virtual to actually been overriden
+// Pure virtual function -- not implemented in base class, makes a class abstract
+    // SYNTAX: virtual (....) = 0;
+// Abstract base classes cannot be constructed as objects
+
+// Scope resolution operator can be used to  call a function from the base class when the derived class has a function w/ same name
+    // Scope resolution operator is (::)
+
+// Reduction -- Reducing problem X to problem Y means writing an algorithm for X that uses an algorithm for y as a subroutine
+// Recurson -- Special kind of reduction: reduce a problem to a smaller version of the same problem
+
+// Every problem that can be solved with recursion can be solved with iteration (loops)
+    // CON: Recursion can be slower, and are particularly prone to stack overflow
+    // PRO: Recursion often yields cleaner, easier-to-reason-about code than iteration
+
+// DESIGNING RECURSIVE ALGORIHMS REQUIRES:
+
+// Base case:
+    // If size of problem is small enough, solve it directly without a recursive call
+// Recursive case:
+    // Divide your problem into one or more smaller problems
+    // Recursively call the smaller problems
+    // I forgot
+    

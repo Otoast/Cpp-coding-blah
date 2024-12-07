@@ -1,0 +1,52 @@
+
+// Procedual programming - program consists of of a long list of instructions run in sequence 
+    // Repeated instructions grouped into functions (form of abstraction -- ability to use something without needing to know how function works)
+
+// Object oriented programming -- groups code into classes which descirbe objects
+    //  Classes used to group data & related functions/methods
+    //  Allows for encapsulation -- Data within class only available via class's methods
+        //  Benefits: code safety, control on how data is represented while still allowing interaction
+
+//  Levels of visibility for class members (private by default):
+    // Public -- Visible to anyone who can see the class
+    // Protected -- visible only to functions in class & classes which inherit from class
+    // Private -- visible only to functions in the class
+// Structs are essentially the public version of classes
+    // Use structs for simply grouping attributes (ex: coordinate Struct)
+    // Use functions for more complicated methods and interactions (ex: ecosystem Class)
+
+// UML -- unified Modeling language
+    // Representd by rectangle divided by 3 compartments:
+        //  Top compartment: class name | Middle compartment: class attribute | Bottom compartment: class methods |
+        //  (+ = public), (- = private), (# = protected)
+        // Association: Car----> engine | Read as: Car "HAS A" engine 
+        // Aggregation: Wheel -----< > Car | Read as: Wheel "IS A PART OF" Car
+        // Composition: Room ----<*>House | Read as: Room "IS ENTIRELY A PART OF" House (can't exist without house)
+        //  Inheritance: Dog ------|> Animal | Read as: Dog "IS A KIND OF" Animal
+
+// Constructor: special member function that is automatically called when creating an object
+// ex: 
+/* class dog{
+ *    dog(){
+ *      cout << "Hello" << endl;
+ *  }
+ *}
+ */
+// Same name as class, no retrun type: function can have multiple constructors, as long as type/number of inputs taken by each is different
+
+// If programmer does not define a constructor, compiler implicitly creates a default constructor (will not happen if there is already a constructor)
+// Default constructor -- implicitly created constructor w/ no parameters
+
+// Alternative way to initialize member variables, seperated by a colon
+//intitially, then rest seperated by colon
+// Preferred way to intiialize variables in C++
+// 
+// dog(): timesPetted(0), isGoodBoy(true), howManyFleas(2600)
+// {}
+
+// Member intiialization lists benefits:
+    // Faster Performance -- Less function calls at object creation
+    // Non-static Const Data Members Initialization -- If data member is non static & const, can only be initialized through this
+    // Data Member and Parameter Variable Names -- can spell the parameter name and class variable name the same way
+    // Base Class Data Member Initialization --  Intiializing data members in base classes must use member initialization list
+    // User defined Data Types without Default Constructor -- If a user-defined data member has no default constructor, member initilization is required

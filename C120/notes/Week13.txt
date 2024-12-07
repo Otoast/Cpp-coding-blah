@@ -1,0 +1,11 @@
+// (singly) Linked list: way fo modelling finite sequence
+    // Data in linked list is stored in nodes, scattered throughout memory
+    // Each node has a pointer (link) to next node in the list
+    // last node will have a link to a nullptr
+
+// Linked List Terminology:
+    // Head: first node in linked list 
+        // No other node points to it
+    // Tail: final node in linked list
+        // Links to a nullptr
+    

@@ -1,0 +1,53 @@
+
+// Possible to overload operator
+list list::operator+(list rhs)
+// Only use operator overloading when meaning of the operator for the type will be obvious
+    // Otherwise use well-named function
+// Also overload related operators (if your class supports >, it should also support <)
+
+
+// Default constructor not guaranteed to initialize member types with built in types
+// Default constructor will call no-argument constructors for all member attributes with class/struct types
+// Default constructor does not intiialize pointer member attributes (whether its a class, struct, or built-in)
+// Destructor -- special function called when memory for an object is about to be deallocated
+    // ~Foo() {delete x} destructor must have no parameters
+// Default destructors work like default constructors : will delete classes and structs, but not pointer member attributes
+
+// Foo(const Foo& objToCopy){} <----Copy constructor || specially denoted bt taking const reference to its class
+    // Needs to be a reference, not a regular Foo objToCopy. If not done like that, will cause an infinite recursion loop
+// To copy an object to another object without having issues, will have to overload "=" operator
+// Foo& operator=(const Foo& objToCopy)
+    // shallow copy - the value of each member attribute is copied from one object to another
+        // Issue arises when pointers are used: will copy the address of the pointer, instead of making a new pointer
+        // And when deletion is called, will have a double free error
+    // Deep copy -- creates a new copy of whatever it points to, does a proper copy of pointers
+
+// Need to check if this == &objToCopy
+    // Reason: if this == &objToCopy, then deleting the pointer in this is also deleting the pointer in object to copy
+    // If returns true, will just return the objToCopy
+
+// If your class defines any of 
+    // Destructor
+    // Copy constructor
+    // Copy assignment operator
+// It should define all three.
+
+// Destructor should release all resources object has required (automatically runs, does not to be explicitly called)
+
+// Copy constructor is invoked:
+    // When assigning to a newly created object
+    // When using new and passing an existing object
+        Ex: 
+        Foo a;
+        Foo b = a; <--- Copy constructor is called because b is being INTIALIZED with a information
+        foo *c = new Foo(b); <-- to make this new Foo object, takes in Foo parameter to copy
+        int i = bar(*c); <--- if passing c by value, must INITIALIZE a new Foo object with information from c
+    // When passing function parameters by value
+
+// Copy assignment operator:
+    // Used for copying an object into an already existing variable
+        Ex:
+        Foo a, b;
+        b = a;
+    // Need to check for self-assignment
+    // Need to delete memory of previously existing variable (in this case b) then initialize new memory and copy a values

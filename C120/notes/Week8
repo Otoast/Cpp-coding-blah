@@ -1,0 +1,26 @@
+/*#include <iostream>
+
+struct person {
+    int x, y;
+    char* name;
+    ~person(){ // Called when an object is getting destroyed(~nameOfClass) which was created by new
+        delete[] name;
+        delete x, y;
+    }
+}
+
+using namespace std;
+int main(){
+
+
+    // a-> b shorthand to (*a).b
+    // dereferences pointers to structs/classes then accesses one of their members
+    person p = new person();
+    p->x = 12;
+    (*p).x = 12; // same thing
+    person *p = new person();
+    person -> name = new char[7] {"Calvin"};
+    delete p;
+
+    return 0;
+}*/

@@ -1,0 +1,36 @@
+
+int main(){
+int x = 69420;
+int &y = x; //y is a reference. It is essentially another name for x
+int *y = &x; //y is a pointer. It holds the memory address of x. Can be assigned to a new memory address
+// Each object has its own special type of pointer, can be uninitialized. References cannot be uninitialized
+
+/* Using references over pointers is generally prefered When pointers are neccesary
+    (1) Change memory address of variable
+    (2) Need a variable to refer to no memory address at all (null pointer) 
+    (3) Need to use functions written in C-style
+    (4) Pointers are backwards compatible with C, references are not.
+*/
+// References are useful for function passing by reference without performing too much extra syntax
+// variable decalred as const reference cannot be assigned to aftr initialization, essentially "promise" compiler you wont do anything
+//      only to pass literal by reference, like sort(120) and int sort(const int& x)
+
+/* When to pass by reference:
+        -->If function needs to modify its input argument
+    When to pass by const reference:
+        -->When input is large and doesnt need to be copied
+        -->polymorphism in input (letting a parent class accept multiple sublasses in a function (exception const&  e) )
+    When to pass by value:
+        -->When input is small (e.g. primitive types)
+        -->When the input wouldneed to be copied anyway
+*/
+    
+    void* z = &x;
+    // Casting: converting variable from one type to another. C++ tries to automatically do it (rarely works)
+    // Explicit Casting: telling compiler to convert from one type to another. Done when implicit casting doesnt apply, or gives bad type ex: (char) 42 || static_cast<char>(42)
+    // Can also cast memory addresses?!?! (char*) int &y = &x; y converts whatever y is holding to a char for z. Essentially useful for casting void*
+
+
+
+
+}
